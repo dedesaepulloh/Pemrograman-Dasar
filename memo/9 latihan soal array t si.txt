@@ -1,0 +1,105 @@
+#include<iostream.h>
+#include<conio.h>
+#include<iomanip.h>
+#include<windows.h>
+garis()
+{
+cout<<"==========================================================================="<<endl;
+}
+
+main()
+{
+system("color D");
+char namapenumpang[30][10],kode[16],tujuan[15][10],no[10],namakereta[15][10],input;
+long harga[12],pot[12],subtotal[12],total,bayar[12],kembali;
+int usia[10],a,c,y,b;
+
+a=0;
+do
+{
+a++;
+cout<<" Nama Penumpang       : ";cin>>namapenumpang[a];
+cout<<" Usia                 : ";cin>>usia[a];
+cout<<" Kode Kereta [A/M/P]  : ";cin>>kode[a];
+cout<<" Tujuan               : ";cin>>tujuan[a];
+cout<<endl;
+
+cout<<" Input data lagi [Y/T] : ";cin>>input;
+cout<<endl;
+
+}
+while(input=='Y'||input=='y');
+
+clrscr();
+
+cout<<"\t\t\t Kwitansi Pembayaran 	"<<endl;
+garis();
+cout<<"No |Nama Kereta        |Tujuan       |Harga        |Potongan      |Subtotal"<<endl;
+garis();
+
+
+  y=5;
+  total=0;
+   	for(b=1;b<=a;b++)
+      {
+        gotoxy(2,y);cout<<b;
+        strupr(tujuan[b]);
+if(kode[b]=='a'||kode[b]=='A')
+{
+   strcpy(namakereta[b],"Argo");
+   if(strcmp(tujuan[b],"SURABAYA")==0)
+     harga[b]=500000;
+   else if(strcmp(tujuan[b],"JOGJA")==0)
+     harga[b]=250000;
+   else
+     harga==0;
+}
+else if(kode[b]=='m'||kode[b]=='M')
+{	strcpy(namakereta[b],"Mutiara Selatan");
+   if(strcmp(tujuan[b],"SURABAYA")==0)
+     harga[b]=300000;
+   else if(strcmp(tujuan[b],"JOGJA")==0)
+     harga[b]=200000;
+   else
+     harga==0;
+}
+else if(kode[b]=='p'||kode[b]=='P')
+{	strcpy(namakereta[b],"Parahyangan");
+   if(strcmp(tujuan[b],"BANDUNG")==0)
+     harga[b]=200000;
+   else if(strcmp(tujuan[b],"JAKARTA")==0)
+     harga[b]=400000;
+   else
+     harga==0;
+}
+else
+	strcpy(namakereta[b],"-");
+
+        gotoxy(5,y);cout<<setw(4)<<namakereta[b];
+        gotoxy(10,y);cout<<setw(20)<<tujuan[b];
+        gotoxy(30,y);cout<<setw(15)<<harga[b];
+
+        if(usia[b]<=5)
+           pot[b]=0.4*harga[b];
+        else if(usia[b]>=60)
+           pot[b]=0.5*harga[b];
+        else
+           pot[b]=0;
+        gotoxy(45,y);cout<<setw(15)<<pot[b];
+        subtotal[b]=harga[b]-pot[b];
+        gotoxy(60,y);cout<<setw(15)<<subtotal[b];
+        total=total+subtotal[b];
+        cout<<endl;
+	y++;
+      }
+garis();
+cout<<"\t\t\t\t\t\t\t\t    Total    : ";
+     	gotoxy(80,y+1);cout<<setw(1)<<total<<endl;
+cout<<"\t\t\t\t\t\t\t\t    Bayar    : ";cin>>bayar[b];
+cout<<"\t\t\t\t\t\t\t\t    ______________________________-"<<endl;
+cout<<"\t\t\t\t\t\t\t\t    Kembali  : ";
+      kembali=bayar[b]-total;
+      gotoxy(83,y+4);cout<<setw(1)<<kembali<<endl;
+
+getch();
+}

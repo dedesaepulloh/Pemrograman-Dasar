@@ -1,0 +1,21 @@
+#include<iostream.h>
+#include<conio.h>
+#include<iomanip.h>
+
+main()
+{
+char kode,*nama_pesawat;
+
+cout<<"Masukkan Kode Pesawat:";cin>>kode;
+ if(kode=='a'||kode=='A')
+ {
+ nama_pesawat="Merpati";
+ }
+ else
+ {
+ nama_pesawat="Garuda";
+ }
+ cout<<nama_pesawat;
+
+getch();
+}

@@ -1,0 +1,30 @@
+CONTOH MEMBUAT file_header.h
+
+#define awal main()
+#define volume (s*s*s)
+
+//Catatan: Save File Header di C/BC5/INCLUDE, beri nama dan tambahkan ekstensi .h
+
+-------------------------------------------------------------------------------------------
+
+CONTOH PEMAKAIAN CUSTOM FILE HEADER
+
+#include "iostream.h"
+#include<conio.h>
+#define hasil (n*10)
+#include<coba>
+awal
+//dari define file header diatas
+
+{
+int n,s;
+cout<<"Masukkan Nilai N:";cin>>n;
+cout<<hasil;
+cout<<endl;
+cout<<"Masukkan Sisi   :";cin>>s;
+cout<<volume;
+//rumus tidak disertakan karena sudah ada dalam file header
+getch();
+}
+
+

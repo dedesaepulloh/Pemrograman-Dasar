@@ -1,0 +1,19 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+
+main()
+{
+   char nama[23];
+   int nilai_uts;
+   int nilai_uas;
+   float nilai_akhir;
+
+   printf("Nama Mahasiswa   : ");gets(nama);
+   printf("Nilai UTS        : ");scanf("%d",&nilai_uts);
+   printf("Nilai UAS        : ");scanf("%d",&nilai_uas);
+   nilai_akhir=(0.4*nilai_uts)+(0.6*nilai_uas);
+   printf("Nilai Mahasiswa atas nama %s memiliki nilai akhir sebesar %.0f ",
+   nama,nilai_akhir);
+   getch();
+}

@@ -1,0 +1,18 @@
+#include <iostream.h>
+#include <stdio.h>
+#include <conio.h>
+
+main(){
+int p,l,luas;
+cout << "PROGRAM MENGHITUNG LUAS PERSEGI PANJANG \n";
+cout << "--------------------------------------- \n";
+cout << "Masukan Panjang :";
+cin >> p;
+cout << "Masukan Lebar :";
+cin >> l;
+luas=p*l;
+cout << "Jadi,Luas Persegi Panjang Adalah : " << luas << endl;
+cout << "--------------------------------------- \n";
+
+getch();
+}

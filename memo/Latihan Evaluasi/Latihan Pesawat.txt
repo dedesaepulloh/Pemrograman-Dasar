@@ -1,0 +1,63 @@
+#include<iostream.h>
+#include<conio.h>
+
+main()
+{
+
+int jubel,jumlahbeli,a;
+char nama[21],namapesawat[7],kode[3],kelas;
+long hargatiket,subtotal,total=0;
+
+cout<<"Tiket Pesawat Bandara Chiko_red"<<endl;
+cout<<"-------------------------------"<<endl<<endl;
+cout<<"Nama Penumpang   :";cin>>nama;
+cout<<"Jumlah Beli      :";cin>>jubel;
+
+for(a=1;a<=jubel;a++)
+{
+cout<<endl;
+cout<<"Tiket Ke         :"<<a<<endl;
+cout<<"Kode Kode Pesawat:"<<endl;
+cout<<"[GAR] = Garuda"<<endl;
+cout<<"[MPT] = Merpati"<<endl;
+cout<<"Masukkan Kode Pesawat:";cin>>kode;
+cout<<"Kelas Pesawat:"<<endl;
+cout<<"[1] Eksekutif"<<endl;
+cout<<"[2] Bisnis"<<endl;
+cout<<"[3] Ekonomi"<<endl;
+cout<<"Pilih Kelas      :";cin>>kelas;
+strupr(kode);
+if (strcmp(kode, "GAR")==0)
+{
+strcpy (namapesawat, "GARUDA");
+if (kelas=='1')
+hargatiket=10000;
+else if (kelas=='2')
+hargatiket=85000;
+cout<<endl;
+cout<<"Nama Pesawat     :"<<namapesawat<<endl;
+cout<<"Harga            :"<<hargatiket<<endl;
+cout<<"Jumlah Tiket     :";cin>>jumlahbeli;
+subtotal=hargatiket*jumlahbeli;
+cout<<"Subtotal         :"<<subtotal<<endl;
+}
+else if (strcmp(kode, "MPT")==0)
+{
+strcpy (namapesawat, "MERPATI");
+if (kelas=='1')
+hargatiket=75000;
+else if (kelas=='2')
+hargatiket=50000;
+cout<<endl;
+cout<<"Nama Pesawat     :"<<namapesawat<<endl;
+cout<<"Harga            :"<<hargatiket<<endl;
+cout<<"Jumlah Tiket     :";cin>>jumlahbeli;
+subtotal=hargatiket*jumlahbeli;
+cout<<"Subtotal         :"<<subtotal<<endl;
+cout<<"-------------------------------"<<endl<<endl;
+}
+total=total+subtotal;
+}
+cout<<"Total Bayar      :"<<total;
+getch();
+}

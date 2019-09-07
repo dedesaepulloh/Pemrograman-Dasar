@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <conio.h>
+#include <iostream.h>
+main()
+{
+int j;
+j=3;    
+cout <<"=====================================================================";
+gotoxy(1,2);cout << "| NO  |";
+gotoxy(8,2);cout << "    NPM     |";
+gotoxy(28,2);cout << "    NAMA            |";
+
+cout << endl;
+cout <<"=====================================================================";
+
+ for (int i=1;i<30;i++){
+ j++;
+gotoxy(1,j);cout <<  "| ";
+gotoxy(3,j);cout <<i;
+gotoxy(6,j);cout <<  " |";
+gotoxy(9,j);cout << "4320000000" << i;
+gotoxy(19,j);cout <<  " |";
+gotoxy(21,j);cout << " Mahasiswa Ke " << i;
+gotoxy(47,j);cout <<  " |";
+
+}
+getch();
+}

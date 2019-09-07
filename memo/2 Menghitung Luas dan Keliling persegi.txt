@@ -1,0 +1,23 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+
+main()
+{
+   char nama[23];
+   int panjang;
+   int lebar;
+   float keliling;
+   float luas;
+
+   printf("Nama           : ");gets(nama);
+   printf("Panjang        : ");scanf("%d",&panjang);
+   printf("Lebar          : ");scanf("%d",&lebar);
+   keliling=2*(panjang+lebar);
+   printf("Keliling persegi %s memiliki keliling sebesar %.0f ",
+   nama,keliling);
+   luas=panjang*lebar;
+   printf("Luas persegi %smemiliki luas sebesar %.0f ",
+   nama,luas);
+   getch();
+}

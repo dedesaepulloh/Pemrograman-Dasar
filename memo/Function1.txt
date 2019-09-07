@@ -1,0 +1,55 @@
+#include<iostream.h>
+#include<conio.h>
+#include<iomanip.h>
+
+garis1()
+{
+   cout<<"\n==================\n";
+}
+
+main()
+{
+   garis1();
+   cout<<"Data Mahasiswa";
+   garis1();
+
+
+getch();
+}
+
+
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+
+#include<iostream.h>
+#include<conio.h>
+#include<iomanip.h>
+
+garis1()
+{
+   cout<<"\n==================\n";
+}
+garis2(int a)
+{
+   cout<<endl;
+   cout<<setfill('*');
+   cout<<setw(a);
+   cout<<endl;
+}
+
+main()
+{
+   int b;
+
+   garis1();
+   cout<<"Data Mahasiswa";
+   garis1();
+
+   b=5;
+   garis2(b);
+   garis2(10);
+
+getch();
+}

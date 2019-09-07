@@ -1,0 +1,526 @@
+#include<iostream.h>
+#include<conio.h>
+#define phi 3.14
+#include<kelompok2.h>
+head()
+{
+cout<<" ========================================================================="<<endl;
+cout<<"                   >SELAMAT DATANG DI PROGRAM KELOMPOK 02<                "<<endl;
+cout<<"                           KALKULATOR BANGUN DATAR                        "<<endl;
+cout<<" Program ini dibuat untuk memenuhi tugas mata kuliah Algoritma Pemrograman"<<endl;
+cout<<" ========================================================================="<<endl;
+cout<<endl;
+}
+
+main()
+{
+char keyword[5],input_ulang,pilih_bangun_datar,pilih_operasi_lingkaran,pilih_operasi_persegi,lagi,exit,pilih_operasi_persegi_panjang,pilih_operasi_segitiga,pilih_operasi_belah_ketupat,pilih_operasi_trapesium,pilih_operasi_jajar_genjang,pilih_operasi_layang_layang;
+float r,keliling_lingkaran,luas_lingkaran,luas_persegi,keliling_persegi,sisi,panjang,lebar,luas_persegi_panjang,keliling_persegi_panjang,sisi_a,sisi_b,sisi_c,sisi_d,alas,tinggi,keliling_segitiga,luas_segitiga,keliling_belah_ketupat,diagonal_v,diagonal_h,luas_belah_ketupat,keliling_trapesium,luas_trapesium,sisi_sejajar_a,sisi_sejajar_b,keliling_jajar_genjang,luas_jajar_genjang,sisi_miring;
+float keliling_layang_layang,luas_layang_layang;
+
+deny:
+clrscr();
+head();
+cout<<" Dibuat oleh kelompok 02"<<endl;
+cout<<" 1. Muhamad Ramdan       NIM: 12160751"<<endl;
+cout<<" 2. Agung Arifulhaq      NIM: 12160107"<<endl;
+cout<<" 3. Ari Fitriawan        NIM: 12160381"<<endl;
+cout<<" 4. Risma Maelani        NIM: 12161175"<<endl;
+cout<<" 5. Revi Sri Rahayu      NIM: 12161600"<<endl;
+cout<<" 6. Tini Natalya S.      NIM: 12161019"<<endl<<endl;
+cout<<" Ketik 'Mulai' untuk memulai: ";cin>>keyword;
+strupr(keyword);
+if (strcmp(keyword,"Mulai")==0)
+{
+goto allow;
+}
+else
+{
+cout<<" Input Ulang Keyword [Y||T] : ";cin>>input_ulang;
+   if(input_ulang=='Y'||input_ulang=='y')
+   goto deny;
+   else
+   goto exit;
+}
+allow:
+cout<<endl;
+clrscr();
+head();
+cout<<" Pilihan Bangun Datar:"<<endl;
+cout<<" 1. Lingkaran"<<endl;
+cout<<" 2. Persegi"<<endl;
+cout<<" 3. Persegi Panjang"<<endl;
+cout<<" 4. Segitiga"<<endl;
+cout<<" 5. Belah Ketupat"<<endl;
+cout<<" 6. Trapesium"<<endl;
+cout<<" 7. Jajar Genjang"<<endl;
+cout<<" 8. Layang-layang"<<endl;
+cout<<" X. Untuk Keluar"<<endl;
+cout<<" Pilih Bangun Datar : ";cin>>pilih_bangun_datar;
+
+if(pilih_bangun_datar=='1')
+   {
+   clrscr();
+   head();
+   cout<<"                                >LINGKARAN<"<<endl<<endl;
+   cout<<" Pilih Operasi Lingkaran:"<<endl;
+   cout<<" 1. Menghitung Keliling Lingkaran"<<endl;
+   cout<<" 2. Menghitung Luas Lingkaran"<<endl;
+   cout<<" X. Exit"<<endl;
+   cout<<" Pilih Operasi Lingkaran : ";cin>>pilih_operasi_lingkaran;
+      if(pilih_operasi_lingkaran=='1')
+      {
+      clrscr();
+      head();
+      cout<<"                                >LINGKARAN<"<<endl<<endl;
+      cout<<" MENGHITUNG KELILING LINGKARAN"<<endl;
+      cout<<" Masukkan Jari-Jari Lingkaran: ";cin>>r;
+      cout<<endl;
+      keliling_lingkaran=phi*(r*2);
+      cout<<" Keliling Lingkaran Adalah   : "<<keliling_lingkaran<<endl<<endl;
+      cout<<" Mulai Perhitungan Lagi?"<<endl;
+      cout<<" [Y] atau [T]                : ";cin>>lagi;
+      if(lagi=='Y'||lagi=='y')
+      goto allow;
+      else
+      goto exit;
+      }
+      else if (pilih_operasi_lingkaran=='2')
+      {
+      clrscr();
+      head();
+      cout<<"                                >LINGKARAN<"<<endl<<endl;
+      cout<<" MENGHITUNG LUAS LINGKARAN"<<endl;
+      cout<<" Masukkan Jari-jari Lingkaran: ";cin>>r;
+      cout<<endl;
+      luas_lingkaran=phi*(r*r);
+      cout<<" Luas Lingkaran Adalah       : "<<luas_lingkaran<<endl<<endl;
+      cout<<" Mulai Perhitungan Lagi?"<<endl;
+      cout<<" [Y] atau [T]                : ";cin>>lagi;
+      if(lagi=='Y'||lagi=='y')
+      goto allow;
+      else
+      goto exit;
+      }
+      else if(pilih_operasi_lingkaran=='X'||'x')
+      {
+      cout<<" Anda Yakin Ingin Keluar?"<<endl;
+      cout<<" [Y] atau [T]             : ";cin>>exit;
+      if(exit=='Y'||exit=='y')
+      goto exit;
+      else
+      goto deny;
+
+      }
+   }
+else if(pilih_bangun_datar=='2')
+   {
+   clrscr();
+   head();
+   cout<<"                                 >PERSEGI<"<<endl<<endl;
+   cout<<" Pilih Operasi Persegi"<<endl;
+   cout<<" 1. Menghitung Keliling Persegi"<<endl;
+   cout<<" 2. Menghitung Luas Persegi"<<endl;
+   cout<<" X. Exit"<<endl;
+   cout<<" Pilih Operasi Persegi: ";cin>>pilih_operasi_persegi;
+      if(pilih_operasi_persegi=='1')
+      {
+      clrscr();
+      head();
+      cout<<"                                 >PERSEGI<"<<endl<<endl;
+      cout<<" MENGHITUNG KELILING PERSEGI"<<endl;
+      cout<<" Masukkan Panjang Sisi Persegi: ";cin>>sisi;
+      cout<<endl;
+      keliling_persegi=4*sisi;
+      cout<<" Keliling Persegi Adalah      : "<<keliling_persegi<<endl<<endl;
+      cout<<" Mulai Perhitungan Lagi? "<<endl;
+      cout<<" [Y] atau [T]                 : ";cin>>lagi;
+      if(lagi=='Y'||lagi=='y')
+      goto allow;
+      else
+      goto exit;
+      }
+      else if (pilih_operasi_persegi=='2')
+      {
+      clrscr();
+      head();
+      cout<<"                                 >PERSEGI<"<<endl<<endl;
+      cout<<" MENGHITUNG LUAS PERSEGI"<<endl;
+      cout<<" Masukkan Panjang Sisi Persegi: ";cin>>sisi;
+      cout<<endl;
+      luas_persegi=sisi*sisi;
+      cout<<" Luas Persegi Adalah          : "<<luas_persegi<<endl<<endl;
+      cout<<" Mulai Perhitungan Lagi?"<<endl;
+      cout<<" [Y] atau [T]                 : ";cin>>lagi;
+      if(lagi=='Y'||lagi=='y')
+      goto allow;
+      else
+      goto exit;
+      }
+      else if(pilih_operasi_persegi=='X'||'x')
+      {
+      cout<<" Anda Yakin Ingin Keluar?"<<endl;
+      cout<<" [Y] atau [T]                 : ";cin>>exit;
+      if(exit=='Y'||exit=='y')
+      goto exit;
+      else
+      goto deny;
+
+      }
+   }
+else if(pilih_bangun_datar=='3')
+   {
+   clrscr();
+   head();
+   cout<<"                             >PERSEGI PANJANG<"<<endl<<endl;
+   cout<<" Pilih Operasi Persegi Panjang"<<endl;
+   cout<<" 1. Menghitung Keliling Persegi Panjang"<<endl;
+   cout<<" 2. Menghitung Luas Persegi Panjang"<<endl;
+   cout<<" X. Exit"<<endl;
+   cout<<" Pilih Operasi Persegi Panjang   : ";cin>>pilih_operasi_persegi_panjang;
+      if(pilih_operasi_persegi_panjang=='1')
+      {
+      clrscr();
+      head();
+      cout<<"                             >PERSEGI PANJANG<"<<endl<<endl;
+      cout<<" MENGHITUNG KELILING PERSEGI PANJANG"<<endl;
+      cout<<" Masukkan Panjang Persegi Panjang:";cin>>panjang;
+      cout<<" Masukkan Lebar Persegi Panjang : ";cin>>lebar;
+      cout<<endl;
+      keliling_persegi_panjang=2*(panjang+lebar);
+      cout<<" Keliling Persegi Adalah Panjang:"<<keliling_persegi_panjang<<endl<<endl;
+      cout<<" Mulai Perhitungan Lagi?"<<endl;
+      cout<<" [Y] atau [T]                   : ";cin>>lagi;
+      if(lagi=='Y'||lagi=='y')
+      goto allow;
+      else
+      goto exit;
+      }
+      else if (pilih_operasi_persegi_panjang=='2')
+      {
+      clrscr();
+      head();
+      cout<<"                             >PERSEGI PANJANG<"<<endl<<endl;
+      cout<<" MENGHITUNG LUAS PERSEGI PANJANG"<<endl;
+      cout<<" Masukkan Panjang Persegi Panjang: ";cin>>panjang;
+      cout<<" Masukkan Lebar Persegi Panjang  : ";cin>>lebar;
+      cout<<endl;
+      luas_persegi_panjang=panjang*lebar;
+      cout<<" Luas Persegi Panjang Adalah     : "<<luas_persegi_panjang<<endl<<endl;
+      cout<<" Mulai Perhitungan Lagi?"<<endl;
+      cout<<" [Y] atau [T]                    : ";cin>>lagi;
+      if(lagi=='Y'||lagi=='y')
+      goto allow;
+      else
+      goto exit;
+      }
+      else if(pilih_operasi_persegi_panjang=='X'||'x')
+      {
+      cout<<" Anda Yakin Ingin Keluar?"<<endl;
+      cout<<" [Y] atau [T]                    : ";cin>>exit;
+      if(exit=='Y'||exit=='y')
+      goto exit;
+      else
+      goto deny;
+
+      }
+   }
+else if(pilih_bangun_datar=='4')
+   {
+   clrscr();
+   head();
+   cout<<"                                 >SEGITIGA<"<<endl<<endl;
+   cout<<" Pilih Operasi Segitiga"<<endl;
+   cout<<" 1. Menghitung Keliling Segitiga"<<endl;
+   cout<<" 2. Menghitung Luas Segitiga"<<endl;
+   cout<<" X. Exit"<<endl;
+   cout<<" Pilih Operasi Segitiga: ";cin>>pilih_operasi_segitiga;
+      if(pilih_operasi_segitiga=='1')
+      {
+      clrscr();
+      head();
+      cout<<"                                 >SEGITIGA<"<<endl<<endl;
+      cout<<" MENGHITUNG KELILING SEGITIGA"<<endl;
+      cout<<" Masukkan Panjang Sisi A : ";cin>>sisi_a;
+      cout<<" Masukkan Panjang Sisi B : ";cin>>sisi_b;
+      cout<<" Masukkan Panjang Sisi C : ";cin>>sisi_c;
+      cout<<endl;
+      keliling_segitiga=sisi_a+sisi_b+sisi_c;
+      cout<<" Keliling Segitiga Adalah: "<<keliling_segitiga<<endl<<endl;
+      cout<<" Mulai Perhitungan Lagi?"<<endl;
+      cout<<" [Y] atau [T]            : ";cin>>lagi;
+      if(lagi=='Y'||lagi=='y')
+      goto allow;
+      else
+      goto exit;
+      }
+      else if (pilih_operasi_segitiga=='2')
+      {
+      clrscr();
+      head();
+      cout<<"                                 >SEGITIGA<"<<endl<<endl;
+      cout<<" MENGHITUNG LUAS SEGITIGA"<<endl;
+      cout<<" Masukkan Panjang Alas  : ";cin>>alas;
+      cout<<" Masukkan Panjang Tinggi: ";cin>>tinggi;
+      cout<<endl;
+      luas_segitiga=0.5*alas*tinggi;
+      cout<<" Luas Segitiga Adalah   : "<<luas_segitiga<<endl<<endl;
+      cout<<" Mulai Perhitungan Lagi?"<<endl;
+      cout<<" [Y] atau [T]           : ";cin>>lagi;
+      if(lagi=='Y'||lagi=='y')
+      goto allow;
+      else
+      goto exit;
+      }
+      else if(pilih_operasi_segitiga=='X'||'x')
+      {
+      cout<<" Anda Yakin Ingin Keluar?"<<endl;
+      cout<<" [Y] atau [T]           : ";cin>>exit;
+      if(exit=='Y'||exit=='y')
+      goto exit;
+      else
+      goto deny;
+      }
+   }
+else if(pilih_bangun_datar=='5')
+   {
+   clrscr();
+   head();
+   cout<<"                              >BELAH KETUPAT<"<<endl<<endl;
+   cout<<" Pilih Operasi Belah Ketupat"<<endl;
+   cout<<" 1. Menghitung Keliling Belah Ketupat"<<endl;
+   cout<<" 2. Menghitung Luas Belah Ketupat"<<endl;
+   cout<<" X. Exit"<<endl;
+   cout<<" Pilih Operasi Belah Ketupat: ";cin>>pilih_operasi_belah_ketupat;
+      if(pilih_operasi_belah_ketupat=='1')
+      {
+      clrscr();
+      head();
+      cout<<"                              >BELAH KETUPAT<"<<endl<<endl;
+      cout<<" MENGHITUNG KELILING BELAH KETUPAT"<<endl;
+      cout<<" Masukkan Panjang Sisi        : ";cin>>sisi;
+      cout<<endl;
+      keliling_belah_ketupat=sisi*4;
+      cout<<" Keliling Belah Ketupat Adalah: "<<keliling_belah_ketupat<<endl<<endl;
+      cout<<" Mulai Perhitungan Lagi?"<<endl;
+      cout<<" [Y] atau [T]                 : ";cin>>lagi;
+      if(lagi=='Y'||lagi=='y')
+      goto allow;
+      else
+      goto exit;
+      }
+      else if (pilih_operasi_belah_ketupat=='2')
+      {
+      clrscr();
+      head();
+      cout<<"                              >BELAH KETUPAT<"<<endl<<endl;
+      cout<<" MENGHITUNG LUAS BELAH KETUPAT"<<endl;
+      cout<<" Masukkan Panjang Diagonal V: ";cin>>diagonal_v;
+      cout<<" Masukkan Panjang Diagonal H: ";cin>>diagonal_h;
+      cout<<endl;
+      luas_belah_ketupat=0.5*diagonal_v*diagonal_h;
+      cout<<" Luas Belah Ketupat Adalah  : "<<luas_belah_ketupat<<endl<<endl;
+      cout<<" Mulai Perhitungan Lagi?"<<endl;
+      cout<<" [Y] atau [T]               : ";cin>>lagi;
+      if(lagi=='Y'||lagi=='y')
+      goto allow;
+      else
+      goto exit;
+      }
+      else if(pilih_operasi_belah_ketupat=='X'||'x')
+      {
+      cout<<" Anda Yakin Ingin Keluar?"<<endl;
+      cout<<" [Y] atau [T]               : ";cin>>exit;
+      if(exit=='Y'||exit=='y')
+      goto exit;
+      else
+      goto deny;
+      }
+   }
+
+else if(pilih_bangun_datar=='6')
+   {
+   clrscr();
+   head();
+   cout<<"                                >TRAPESIUM<"<<endl<<endl;
+   cout<<" Pilih Operasi Belah Trapesium"<<endl;
+   cout<<" 1. Menghitung Keliling Belah Trapesium"<<endl;
+   cout<<" 2. Menghitung Luas Trapesium"<<endl;
+   cout<<" X. Exit"<<endl;
+   cout<<" Pilih Operasi Trapesium: ";cin>>pilih_operasi_trapesium;
+      if(pilih_operasi_trapesium=='1')
+      {
+      clrscr();
+      head();
+      cout<<"                                >TRAPESIUM<"<<endl<<endl;
+      cout<<" MENGHITUNG KELILING TRAPESIUM"<<endl;
+      cout<<" Masukkan Panjang Sisi A: ";cin>>sisi_a;
+      cout<<" Masukkan Panjang Sisi B: ";cin>>sisi_b;
+      cout<<" Masukkan Panjang Sisi C: ";cin>>sisi_c;
+      cout<<" Masukkan Panjang Sisi D: ";cin>>sisi_d;
+      cout<<endl;
+      keliling_trapesium=sisi_a+sisi_b+sisi_c+sisi_d;
+      cout<<" Keliling Trapesium Adalah: "<<keliling_trapesium<<endl<<endl;
+      cout<<" Mulai Perhitungan Lagi?"<<endl;
+      cout<<" [Y] atau [T]           : ";cin>>lagi;
+      if(lagi=='Y'||lagi=='y')
+      goto allow;
+      else
+      goto exit;
+      }
+      else if (pilih_operasi_trapesium=='2')
+      {
+      clrscr();
+      head();
+      cout<<"                                >TRAPESIUM<"<<endl<<endl;
+      cout<<" MENGHITUNG LUAS TRAPESIUM"<<endl;
+      cout<<" Masukkan Sisi Sejajar A: ";cin>>sisi_sejajar_a;
+      cout<<" Masukkan Sisi Sejajar B: ";cin>>sisi_sejajar_b;
+      cout<<" Masukkan Tinggi        : ";cin>>tinggi;
+      cout<<endl;
+      cout<<endl;
+      luas_trapesium=0.5*((sisi_sejajar_a+sisi_sejajar_b)*tinggi);
+      cout<<" Luas Trapesium         : "<<luas_trapesium<<endl<<endl;
+      cout<<" Mulai Perhitungan Lagi?"<<endl;
+      cout<<" [Y] atau [T]           : ";cin>>lagi;
+      if(lagi=='Y'||lagi=='y')
+      goto allow;
+      else
+      goto exit;
+      }
+      else if(pilih_operasi_trapesium=='X'||'x')
+      {
+      cout<<" Anda Yakin Ingin Keluar?"<<endl;
+      cout<<" [Y] atau [T]           : ";cin>>exit;
+      if(exit=='Y'||exit=='y')
+      goto exit;
+      else
+      goto deny;
+      }
+   }
+else if(pilih_bangun_datar=='7')
+   {
+   clrscr();
+   head();
+   cout<<"                              >JAJAR GENJANG<"<<endl<<endl;
+   cout<<" Pilih Operasi Jajar Genjang"<<endl;
+   cout<<" 1. Menghitung Keliling Jajar Genjang"<<endl;
+   cout<<" 2. Menghitung Luas Jajar Genjang"<<endl;
+   cout<<" X. Exit"<<endl;
+   cout<<" Pilih Operasi jajar Genjang: ";cin>>pilih_operasi_jajar_genjang;
+      if(pilih_operasi_jajar_genjang=='1')
+      {
+      clrscr();
+      head();
+      cout<<"                              >JAJAR GENJANG<"<<endl<<endl;
+      cout<<" MENGHITUNG KELILING JAJAR GENJANG"<<endl;
+      cout<<" Masukkan Panjang Alas        : ";cin>>alas;
+      cout<<" Masukkan Panjang Sisi Miring : ";cin>>sisi_miring;
+      cout<<endl;
+      keliling_jajar_genjang=2*alas+2*sisi_miring;
+      cout<<" Keliling jajar Genjang Adalah: "<<keliling_jajar_genjang<<endl<<endl;
+      cout<<" Mulai Perhitungan Lagi?"<<endl;
+      cout<<" [Y] atau [T]            : ";cin>>lagi;
+      if(lagi=='Y'||lagi=='y')
+      goto allow;
+      else
+      goto exit;
+      }
+      else if (pilih_operasi_jajar_genjang=='2')
+      {
+      clrscr();
+      head();
+      cout<<"                              >JAJAR GENJANG<"<<endl<<endl;
+      cout<<" MENGHITUNG LUAS JAJAR GENJANG"<<endl;
+      cout<<" Masukkan Panjang Alas    : ";cin>>alas;
+      cout<<" Masukkan Panjang Tinggi  : ";cin>>tinggi;
+      cout<<endl;
+      cout<<endl;
+      luas_jajar_genjang=alas*tinggi;
+      cout<<" Luas Jajar Genjang Adalah: "<<luas_jajar_genjang<<endl<<endl;
+      cout<<" Mulai Perhitungan Lagi?"<<endl;
+      cout<<" [Y] atau [T]            : ";cin>>lagi;
+      if(lagi=='Y'||lagi=='y')
+      goto allow;
+      else
+      goto exit;
+      }
+      else if(pilih_operasi_jajar_genjang=='X'||'x')
+      {
+      cout<<" Anda Yakin Ingin Keluar?"<<endl;
+      cout<<" [Y] atau [T]           : ";cin>>exit;
+      if(exit=='Y'||exit=='y')
+      goto exit;
+      else
+      goto deny;
+      }
+   }
+else if(pilih_bangun_datar=='8')
+   {
+   clrscr();
+   head();
+   cout<<"                              >LAYANG-LAYANG<"<<endl<<endl;
+   cout<<" Pilih Operasi Layang-Layang"<<endl;
+   cout<<" 1. Menghitung Keliling Layang-Layang"<<endl;
+   cout<<" 2. Menghitung Luas Layang-Layang"<<endl;
+   cout<<" X. Exit"<<endl;
+   cout<<" Pilih Operasi Layang-Layang: ";cin>>pilih_operasi_layang_layang;
+      if(pilih_operasi_layang_layang=='1')
+      {
+      clrscr();
+      head();
+      cout<<"                              >LAYANG-LAYANG<"<<endl<<endl;
+      cout<<" MENGHITUNG KELILING LAYANG-LAYANG"<<endl;
+      cout<<" Masukkan Panjang Sisi A      : ";cin>>sisi_a;
+      cout<<" Masukkan Panjang Sisi B      : ";cin>>sisi_b;
+      cout<<endl;
+      cout<<" Keliling Layang-Layang Adalah: "<<keliling_layang_layang<<endl<<endl;
+      cout<<" Mulai Perhitungan Lagi?"<<endl;
+      cout<<" [Y] atau [T]                 : ";cin>>lagi;
+      if(lagi=='Y'||lagi=='y')
+      goto allow;
+      else
+      goto exit;
+      }
+      else if (pilih_operasi_layang_layang=='2')
+      {
+      clrscr();
+      head();
+      cout<<"                              >LAYANG-LAYANG<"<<endl<<endl;
+      cout<<" MENGHITUNG LUAS LAYANG-LAYANG"<<endl;
+      cout<<" Masukkan Panjang Diagonal V: ";cin>>diagonal_v;
+      cout<<" Masukkan Panjang Diagonal H: ";cin>>diagonal_h;
+      cout<<endl;
+      cout<<" Luas layang-Layang Adalah  : "<<luas_layang_layang<<endl<<endl;
+      cout<<" Mulai Perhitungan Lagi?"<<endl;
+      cout<<" [Y] atau [T]               : ";cin>>lagi;
+      if(lagi=='Y'||lagi=='y')
+      goto allow;
+      else
+      goto exit;
+      }
+      else if(pilih_operasi_layang_layang=='X'||'x')
+      {
+      cout<<" Anda Yakin Ingin Keluar?"<<endl;
+      cout<<" [Y] atau [T]           : ";cin>>exit;
+      if(exit=='Y'||exit=='y')
+      goto exit;
+      else
+      goto deny;
+      }
+   }
+
+else if(pilih_bangun_datar=='X'||'x')
+   {
+   cout<<" Anda Yakin Ingin Keluar?"<<endl;
+   cout<<" [Y] atau [T]           : ";cin>>exit;
+   if(exit=='Y'||exit=='y')
+   goto exit;
+   }
+else
+   {
+   goto deny;
+   }
+getch();
+exit:
+}

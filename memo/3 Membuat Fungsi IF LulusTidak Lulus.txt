@@ -1,0 +1,20 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+#include<string.h>
+
+main()
+{
+   int nilai;
+   char ket[13];
+
+   cout<<"Nilai : ";cin>>nilai;
+
+   if (nilai>70)
+      strcpy (ket,"Lulus");
+   else
+      strcpy (ket,"Tidak Lulus");
+
+   cout<<"Keterangan : "<<ket;
+   getch();
+}

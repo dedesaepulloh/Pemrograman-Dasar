@@ -1,0 +1,17 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+#include<string.h>
+
+main ()
+{
+   int jumlah;
+
+   cout<<"Jumlah \t: ";cin>>jumlah;
+
+   float total;
+   total=4500*jumlah;
+
+   cout<<"Jumlah yang harus dibayarkan adalah sebesar\t= "<<total<<endl;
+   getch();
+}

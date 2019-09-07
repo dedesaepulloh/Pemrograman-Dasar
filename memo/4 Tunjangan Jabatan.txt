@@ -1,0 +1,53 @@
+#include<iostream.h>
+#include<stdio.h>
+#include<conio.h>
+
+main()
+{
+
+char jabat[11], jabatan[11];
+int anak;
+long tunjangan;
+
+cout<<"JABATAN [DIR|HRD|PEGAWAI]:";cin>>jabat;
+cout<<"ANAK                     :";cin>>anak;
+
+if(strcmp(jabat, "DIR")==0||strcmp(jabat, "dir")==0)
+{
+strcpy(jabatan, "DIREKTUR");
+if (anak>=1)
+tunjangan=145000;
+else if (anak>=3)
+tunjangan=450000;
+else
+tunjangan=0;
+}
+
+else if(strcmp(jabat, "HRD")==0||strcmp(jabat, "hrd")==0)
+{
+strcpy(jabatan, "HRD");
+if (anak>=1)
+tunjangan=45000;
+else if (anak>=3)
+tunjangan=350000;
+else
+tunjangan=0;
+}
+
+else if(strcmp(jabat, "PEGAWAI")==0||strcmp(jabat, "pegawai")==0)
+{
+strcpy(jabatan, "PEGAWAI");
+if (anak>=1)
+tunjangan=45000;
+else if (anak>=3)
+tunjangan=250000;
+else
+tunjangan=0;
+}
+
+else
+cout<<"Maaf kode yang anda masukkan salah"<<endl;
+
+cout<<"Tunjangan : Rp.";cin>>tunjangan;
+getch();
+}

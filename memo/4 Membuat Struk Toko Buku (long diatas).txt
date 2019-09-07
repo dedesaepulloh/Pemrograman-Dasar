@@ -1,0 +1,63 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+
+
+main ()
+{
+long total, ppn, pot, harga;
+int kodebuku, jumlah;
+char namabuku[23], bonus[33];
+
+cout<<"Masukkan kode buku [1,2,3] "; cin>>kodebuku;
+cout<<"Jumlah pembelian buku "; cin>>jumlah;
+
+cout<<" TOKO BUKU HALIFAH "<<endl;
+cout<<" Jl. Keadlian No. 6 "<<endl;
+
+cout<<"-----------------------"<<endl;
+if(kodebuku==1)
+{
+  strcpy(namabuku, "Sukses belajar Borland C++");
+  harga=50000;
+}
+
+else if(kodebuku==2)
+{
+  strcpy(namabuku, "Kunci Pribadi Yang Sukses");
+  harga=35000;
+}
+
+else if(kodebuku==3)
+{
+  strcpy(namabuku, "Menciari Mutiara Didasar Hati");
+  harga=45000;
+}
+else
+{
+  strcpy (namabuku, "-");
+  harga=0;
+}
+
+cout<<"Nama Buku     : "<<namabuku<<endl;
+cout<<"Harga Buku    : "<<harga<<endl;
+
+if(jumlah>5)
+{
+  pot=0.1*harga;
+  strcpy (bonus, "Notebook");
+}
+else
+{
+  strcpy(bonus, "Maaf Tidak Mendapat Bonus");
+}
+
+cout<<"Potongan      : "<<pot<<endl;
+cout<<"Bonus         : "<<bonus<<endl;
+total=(jumlah*harga)-pot;
+cout<<"Total Bayar   : "<<total<<endl;
+ppn=0.1*total;
+cout<<"PPN           : "<<ppn<<endl;
+cout<<"-----------------------"<<endl;
+getch();
+}

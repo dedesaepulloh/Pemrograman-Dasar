@@ -1,0 +1,33 @@
+#include<iostream.h>
+#include<conio.h>
+
+main()
+{
+
+  char nama[21],kode[5],namabarang[35];
+  long harga;
+
+  cout<<"Nama Pembeli :";cin>>nama;
+  cout<<"Kode Barang  :";cin>>kode;
+    strupr(kode);
+    if(strcmp(kode,"A01")==0)
+    {
+    strcpy(namabarang,"Buku Tere Liye-Tentang Kamu");
+    harga=89000;
+    }
+    else if(strcmp(kode,"A02")==0)
+    {
+    strcpy(namabarang,"Buku Tere Liye-Daun yang jatuh tak pernah membenci angin");
+    harga=55000;
+    }
+    else if(strcmp(kode,"A03")==0)
+    {
+    strcpy(namabarang,"Buku Tere Liye-Kau aku dan sepucuk angpau merah");
+    harga=75000;
+    }
+
+    cout<<endl<<"Nama Barang  :"<<namabarang<<endl;
+    cout<<"Harga        :"<<harga;
+
+  getch();
+}

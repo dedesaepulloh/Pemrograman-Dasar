@@ -1,0 +1,21 @@
+#include<iostream.h>
+#include<conio.h>
+main()
+{
+
+int ratusan_12160751,a_12160751;
+
+atas:
+cout<<"Masukkan Nilai Ratusan 12160751:";cin>>ratusan_12160751;
+
+if (ratusan_12160751<99)
+goto atas;
+else if (ratusan_12160751>999)
+goto atas;
+
+else
+goto selesai;
+
+getch();
+selesai:
+}

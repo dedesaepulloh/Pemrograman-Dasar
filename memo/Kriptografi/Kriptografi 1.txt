@@ -1,0 +1,33 @@
+#include<iostream.h>
+#include<conio.h>
+
+int main(int argc, char *argv[])
+{
+char kata[100];
+int temp_ascii,geser=4;
+
+cout<<"Masukkan kata   :";cin.getline(kata,sizeof(kata));
+cout<<"Hasilnya adalah :";
+for(int i=0;kata[i];i++)
+{
+temp_ascii=int(kata[i]);
+if(temp_ascii != 32)
+{
+if((temp_ascii>=97) && (temp_ascii<=122))//inputan A-Z
+{
+temp_ascii = 97 + (temp_ascii - 97 + geser + 26) % 26;
+cout<<char(temp_ascii);
+}
+else
+if((temp_ascii>=65) && (temp_ascii<=90))//inputan A-Z
+{
+temp_ascii = 65 + (temp_ascii - 65 + geser + 26) % 26;
+cout<<char(temp_ascii);
+}
+}
+else
+
+cout<<char(temp_ascii);
+}
+getch();
+}

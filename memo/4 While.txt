@@ -1,0 +1,19 @@
+#include<iostream.h>
+#include<conio.h>
+
+main()
+{
+int a=2, b=0;
+while(a<=20)
+{
+cout<<a;
+b=b+a;
+if(a<20)
+cout<<"+";
+else
+cout<<"=";
+a+=2;
+}
+cout<<b;
+getch();
+}

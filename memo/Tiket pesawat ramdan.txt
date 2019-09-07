@@ -1,0 +1,19 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+#include<string.h>
+
+main()
+{
+   char nama
+   int kelas
+
+   cout<<"Nama Pesawat [GRD|BTV|MPT]:" cin>>nama;
+   cout<<"Kelas                     :";
+   cout<<"1. Ekonomi";
+   cout<<"2. Bisnis";
+   cout<<"3. Excecutive";
+   cout<<"Pilih Kelas [1|2|3]: "cin>>kelas;
+
+   getch()
+   }

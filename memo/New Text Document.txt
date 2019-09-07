@@ -1,0 +1,21 @@
+SELEKSI KONDISI
+
+- bisa IF bisa Switch Case
+  contoh if (kondisi)
+  
+  contoh jika keterangan dua
+    if (ipk>3)
+    { strcpy (ket, "Lulus");}
+    else
+    strcpy (ket, "Gagal");
+
+  contoh jika keterangan lebih dari 2
+    if(gol=="A")
+    gapok=1000000;
+
+  elseif(gol=="B")
+    gapok=2000000;
+  elseif(gol=="C")
+    gapok=3000000
+  else
+{ cout<<"Maaf gol. yang anda input tidak ada");}

@@ -1,0 +1,22 @@
+#include<iostream.h>
+#include<stdio.h>
+#include<conio.h>
+
+main()
+{
+int jumlahmahasiswa, a;
+char namamahasiswa[33],kelas[13],input;
+
+input='Y';
+a=0;
+while(input=='Y'||input=='y')
+
+{
+a++;
+cout<<"Nama Mahasiswa        :";cin>>namamahasiswa;
+cout<<"Kelas                 :";cin>>kelas;
+cout<<"Input data lagi? [Y/T]:";cin>>input;
+}
+cout<<"Jumlah Mahasiswa      :"<<a;
+getch();
+}

@@ -1,0 +1,22 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+#include<string.h>
+
+main()
+{
+   int panjang,lebar,tinggi;
+
+   cout<<"Panjang     : ";cin>>panjang;
+   cout<<"Lebar       : ";cin>>lebar;
+   cout<<"Tinggi      : ";cin>>tinggi;
+
+   float luas;
+   luas=2*(panjang*lebar+panjang*tinggi+lebar*tinggi);
+   float volume;
+   volume=panjang*lebar*tinggi;
+
+   cout<<"Luas Balok adalah sebesar\t= "<<luas<<endl;
+   cout<<"Volume Balok adalah sebesar\t= "<<volume<<endl;
+   getch();
+}

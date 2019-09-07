@@ -1,0 +1,35 @@
+#include<iostream.h>
+#include<conio.h>
+
+main()
+{
+
+char nama[21],namabarang[3],kode[3];
+int jumlahbeli,a;
+long harga;
+
+cout<<"Nama Pembeli  :";cin>>nama;
+cout<<"Jumlah Beli   :";cin>>jumlahbeli;
+
+for(a=1;a<=jumlahbeli;a++)
+{
+cout<<"Barang Ke     :"<<a<<endl;
+cout<<"Kode Barang   :";cin>>kode;
+
+strupr(kode);
+if (strcmp(kode, "A01")==0)
+{
+strcpy (namabarang, "A");
+harga=5000;
+}
+else if (strcmp(kode, "A02")==0)
+{
+strcpy (namabarang, "B");
+harga=6000;
+}
+
+cout<<"Nama Barang   :"<<namabarang<<endl;
+cout<<"Harga         :"<<harga<<endl;
+}
+getch();
+}

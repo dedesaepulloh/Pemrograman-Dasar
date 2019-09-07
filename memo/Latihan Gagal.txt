@@ -1,0 +1,51 @@
+#include<iostream.h>
+#include<stdio.h>
+#include<conio.h>
+
+main()
+{
+
+char namapembeli[33],nama,kode;
+long harga;
+int jumlahbrg,jumlahbeli;
+
+cout<<"Nama Pembeli   :";cin>>namapembeli;
+cout<<"Jumlah Barang  :";cin>>jumlahbrg;
+
+atas:
+cout<<"Barang Ke      :"<<endl;
+cout<<"Kode Barang    :";cin>>kode;
+
+   if(strcmp(kode, "A01"||"a01")
+   {
+     strcpy(nama, "Buku SIDU 30 Lembar");
+     harga=3000;
+   }
+   else if (strcmp(kode, "A02"||"a02")
+   {
+     strcmp(nama, "Buku SIDU 50 Lembar");
+     harga=5000;
+   else if (strcmp(kode, "B01"||"b01")
+   {
+     strcpy(nama, "Pensil Staedler 2B");
+     harga=3500;
+   else if (strcmp(kode, "B02"||"b02")
+   {
+     strcpy(nama, "Pensil Warna 12 kecil");
+     harga=11000;
+   else if (strcmp(kode, "B03"||"b03")
+   {
+     strcpy(nama, "Pensil Warna 24 kecil");
+     harga=20000;
+   }
+
+cout<<"Nama Barang    :";cin>>nama;
+cout<<"Harga Barang   :";cin>>harga;
+cout<<"Jumlah Beli    :";cin>>jumlahbeli;
+   subtotal=(jumlahbeli*harga);
+cout<<"Subtotal       :";cin>>subtotal;
+
+   total=(jumlahbeli*harga);
+cout<<"Total          :";>>total;
+getch();
+}

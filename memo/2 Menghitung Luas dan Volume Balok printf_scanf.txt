@@ -1,0 +1,18 @@
+
+main()
+{
+   int panjang;
+   int lebar;
+   int tinggi;
+   float luas;
+   float volume;
+
+   printf ("Panjang     : ");scanf("%d",&panjang);
+   printf ("Lebar       : ");scanf("%d",&lebar);
+   printf ("Tinggi      : ");scanf("%d",&tinggi);
+   luas=2*(panjang*lebar+panjang*tinggi+lebar*tinggi);
+   volume=panjang*lebar*tinggi;
+   printf("Luas Balok adalah sebesar %.0f ",luas);
+   printf("Volume Balok adalah sebesar %.0f",volume);
+   getch();
+   }

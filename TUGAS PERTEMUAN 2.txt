@@ -1,0 +1,9 @@
+TUGAS
+1). Buatkan Flowchart berurutan untuk menghitung 5 rumus matematika/Fisika
+2). Buatkan Flowchart Percabangan 1 contoh saja
+3). Buatkan Flowchart Pengulangan 1 contoh saja
+
+Pengiriman paling lambat Minggu 8 Oktober jam 24:00
+Kirim ke Email : repository.cepi@gmail.com
+Subject :TUGAS 2 ALGORITMA NPM NAMA KELAS
+Project dikirim dalam bentuk MS. Word (doc/docx)

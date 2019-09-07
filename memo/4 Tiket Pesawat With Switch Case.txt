@@ -1,0 +1,72 @@
+#include<iostream.h>
+#include<stdio.h>
+#include<conio.h>
+
+main()
+{
+
+char kodepesawat[3], kelas, namapesawat[13];
+long hargatiket, totalbayar;
+int jumlahtiket;
+
+
+cout<<"      PROGRAM TIKET PESAWAT"<<endl;
+cout<<"        JAKARTA-MALAYSIA"<<endl;
+cout<<"-------------------------------------"<<endl;
+cout<<"Masukkan kode pesawat [MPT|GRD|BTV]:";cin>>kodepesawat;
+cout<<"Kelas Pesawat :"<<endl;
+cout<<"        1. Executive"<<endl;
+cout<<"        2. Bisnis"<<endl;
+cout<<"        3. Ekonomi"<<endl;
+cout<<"Pilih kelas [1|2|3] : ";cin>>kelas;
+
+strupr(kodepesawat);
+if(strcmp(kodepesawat, "MPT")==0)
+{
+strcpy(namapesawat, "Merpati");
+switch(kelas)
+{case '1':
+hargatiket=1500000;
+break;
+case '2':
+hargatiket=1000000;
+break;
+case '3':
+hargatiket=500000;
+break;
+default:
+hargatiket=0;
+}}
+
+else if(strcmp(kodepesawat, "GRD")==0)
+{
+strcpy(namapesawat, "Garuda");
+if (kelas=='1')
+hargatiket=1400000;
+else if (kelas=='2')
+hargatiket=800000;
+else if (kelas=='3')
+hargatiket=400000;
+}
+
+else if(strcmp(kodepesawat, "BTV")==0)
+{
+strcpy(namapesawat, "Batavia");
+if (kelas=='3')
+hargatiket=1000000;
+else if (kelas=='2')
+hargatiket=700000;
+else if (kelas=='3')
+hargatiket=300000;
+}
+
+
+cout<<"Nama Pesawat        :"<<namapesawat<<endl;
+cout<<"Harga Tiket         :"<<hargatiket<<endl;
+cout<<"Jumlah Tiket        :";cin>>jumlahtiket;
+totalbayar=jumlahtiket*hargatiket;
+cout<<"Total Bayar         :"<<totalbayar<<endl;
+
+
+getch ();
+}

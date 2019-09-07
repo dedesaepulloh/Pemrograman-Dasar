@@ -1,0 +1,49 @@
+#include<iostream.h>
+#include<conio.h>
+#include<iomanip.h>
+
+main()
+{
+
+  char namabarang[10][30],input;
+  int jumlahbeli[10],i,y,a;
+  long total=0,harga[10],subtotal[10];
+
+  i=0;
+  do
+  {
+  i++;
+  cout<<"Nama Barang   :";cin>>namabarang[i];
+  cout<<"Harga Barang  :";cin>>harga[i];
+  cout<<"Jumlah Beli   :";cin>>jumlahbeli[i];
+  subtotal[i]=harga[i]*jumlahbeli[i];
+  cout<<"Subtotal      :"<<subtotal[i]<<endl;
+  cout<<"Input data lagi [Y|T]?";cin>>input;
+  total=total+subtotal[a];
+
+  }
+  while(input=='y'||input=='Y');
+
+clrscr();
+cout<<"******************* Data Barang *******************"<<endl;
+cout<<"==================================================="<<endl;
+cout<<"Nama Barang        |  Harga  | Jumlah |  Subtotal  "<<endl;
+cout<<"==================================================="<<endl;
+
+y=5;
+for(a=1;a<=i;a++)
+  {
+  gotoxy(1,y);cout<<namabarang[a];
+  gotoxy(19,y);cout<<setw(9)<<harga[a];
+  gotoxy(28,y);cout<<setw(8)<<jumlahbeli[a];
+  gotoxy(36,y);cout<<setw(13)<<subtotal[a];
+  total=subtotal[a]+total;
+  y++;
+  }
+  cout<<endl;
+  cout<<"==================================================="<<endl;
+  cout<<"Total                                    :";
+  gotoxy(30,y+1);cout<<setw(19)<<total;
+
+getch();
+}

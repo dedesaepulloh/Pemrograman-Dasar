@@ -1,0 +1,6 @@
+Pointer
+
+Reference
+di file atas tambahkan bintang(*) contoh *nama_pesawat
+
+nama_pesawat="Merpati";

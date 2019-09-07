@@ -1,0 +1,16 @@
+#include<iostream.h>
+#include<conio.h>
+#define vhi 3.14
+
+//define adalah rumus atau inputan yang ditulis diawal sehingga pada pengerjaannya tidak perlu ditulis manual kembali
+
+main()
+{
+
+float keliling,r;
+cout<<"Masukkan Jari-jari:";cin>>r;
+keliling=2*vhi*r;
+clrscr;
+cout<<keliling<<endl;
+getch();
+}

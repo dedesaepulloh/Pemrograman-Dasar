@@ -1,0 +1,19 @@
+#include<conio.h>
+#include<iostream.h>
+
+main()
+{
+
+int nilai;
+
+cout<<"Masukkan Nilai ujian:";cin>>nilai;
+
+if (nilai<=50)
+cout<<"Anda Gagal"<<endl;
+else if (nilai<=100)
+cout<<"Anda Lulus"<<endl;
+else
+cout<<"Nilai na gede teuing"<<endl;
+
+getch();
+}

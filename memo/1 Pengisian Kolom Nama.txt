@@ -1,0 +1,8 @@
+#include<iostream.h>
+#include<conio.h>
+main()
+{
+   char nama [33];
+	cout<<"Nama Saya : "; cin>>nama;
+   getch();
+}

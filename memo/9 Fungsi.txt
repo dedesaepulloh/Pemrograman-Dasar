@@ -1,0 +1,47 @@
+CONTOH FUNGSI 1
+
+#include<conio.h>
+#include<iostream.h>
+#include<stdio.h>
+garis()
+{
+cout<<"================================="<<endl;
+}
+
+//Fungsi adalah sebuah script pengulangan yang penulisannya diawal.
+//Fungsi hampir sama dengan "Define" hanya bedanya, fungsi bisa dipanggil kembali kapanpun ketika dibutuhkan
+//Cara membuat Fungsi: Tulis nama Fungsi di file header, isi Variabel Fungsi. 
+//memanggil Fungsi: Tulis Nama Fungsi dimana kita membutuhkan. 
+main()
+{
+garis();
+garis();
+garis();
+getch();
+}
+
+
+--------------------------------------------------------------------------------------------------------
+CONTOH FUNGSI 2
+
+#include<conio.h>
+#include<iostream.h>
+#include<stdio.h>
+
+perkalian(int a, int b);
+main()
+{
+int alas,tinggi,luas;
+
+cout<<"Masukkan Alas  :";cin>>alas;
+cout<<"Masukkan Tinggi:";cin>>tinggi;
+luas=perkalian(alas,tinggi);
+cout<<luas<<endl;
+
+getch();
+}
+
+perkalian(int a, int b)
+{
+return(a*b);
+}
